@@ -20,10 +20,12 @@
         specialArgs = { inherit inputs; };
         modules = [ 
           ./configuration.nix
-          nur.nixosModules.nur
-          ({ config, ... }: {
-            environment.systemPackages = [ config.nur.repos.johnazoidberg.ssacli ];
-          })
+          
+          #nur.nixosModules.nur
+          
+          #({ config, ... }: {
+          #  environment.systemPackages = [ config.nur.repos.johnazoidberg.ssacli ];
+          #})
           
           #This imports modules 
            
