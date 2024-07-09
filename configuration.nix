@@ -14,4 +14,13 @@
   environment.sessionVariables = {
     EDIOTR = "nvim";
   };
+  services.openssh = {
+    enable = true;
+    PasswordAuthentication = true;
+  };
+  users.users."bootstrap" = { 
+    isNormalUser = true;
+    initialPassword = "12345";
+    extraGruops = [ "wheel" ];
+  };
 }
